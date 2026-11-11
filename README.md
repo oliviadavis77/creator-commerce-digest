@@ -47,3 +47,7 @@ Above is the happy path. The production checklist: The details below apply to Cr
 - **Creator Commerce Digest:** By default mail goes through a **shared** verified sender — fine for tests, but generic From + limited volume + shared reputation.
 - **Creator Commerce Digest:** For production, verify **your own** domain: `POST /v1/email/domain/verify` with `{"domain":"mail.yourco.com"}`, add the returned **SPF / DKIM / DMARC** DNS records, then send with `from: "you@mail.yourco.com"`.
 - **Creator Commerce Digest:** Use a dedicated subdomain and **warm it up** (ramp volume over days) to protect deliverability.
+
+## Further reading
+
+- [Delayed Password Reset Emails — 4 Evidence Checks for Media Support Routing](docs/delayed-password-reset-emails-4-evidence-checks-f-18svng.md)
